@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AffiliateHub v5</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --accent: #5b4fcf;
+    --accent-light: #ede9fc;
+    --text: #1a1a2e;
+    --muted: #6b6b80;
+    --border: #e4e2da;
+  }
+  body {
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo {
+    width: 36px; height: 36px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 18px;
+  }
+  .brand { font-family: 'DM Serif Display', serif; font-size: 20px; }
+  .brand span { color: var(--accent); }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 600px;
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .subtitle {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 440px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: border-color 0.2s, transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card-icon {
+    width: 40px; height: 40px;
+    background: var(--accent-light);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  .card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  .card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .card-arrow {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .features {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .feature { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+  footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  .footer-links { display: flex; gap: 1.5rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">≡</div>
+  <div class="brand">Affiliate<span>Hub</span> v5</div>
+</header>
+
+<main>
+  <div class="badge">Affiliate Marketing Dashboard</div>
+  <h1>Manage your affiliate<br><em>smarter & faster</em></h1>
+  <p class="subtitle">
+    AffiliateHub v5 helps you track commissions, manage products, and monitor content performance — all in one place.
+  </p>
+
+  <div class="cards">
+    <a href="tos.html" class="card">
+      <div class="card-icon">📄</div>
+      <h3>Terms of Service</h3>
+      <p>Read our terms and conditions for using AffiliateHub v5.</p>
+      <span class="card-arrow">Read terms →</span>
+    </a>
+    <a href="privacy.html" class="card">
+      <div class="card-icon">🔒</div>
+      <h3>Privacy Policy</h3>
+      <p>Learn how we collect, use, and protect your personal data.</p>
+      <span class="card-arrow">Read policy →</span>
+    </a>
+  </div>
+
+  <div class="features">
+    <div class="feature"><div class="dot"></div> Powered by Firebase</div>
+    <div class="feature"><div class="dot"></div> Google Sign-In</div>
+    <div class="feature"><div class="dot"></div> TikTok Shop API</div>
+    <div class="feature"><div class="dot"></div> Data milik kamu sendiri</div>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; 2026 AffiliateHub v5</span>
+  <div class="footer-links">
+    <a href="tos.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
